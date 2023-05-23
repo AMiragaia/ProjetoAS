@@ -7,13 +7,13 @@
   margin: auto;
   display:flex;
   align-items: center;
-  max-width: 443px;
+  width: 443px;
   height: auto;
 }
 .ainda-no-tem {
   position: absolute;
   top: 540px;
-  left: 750px;  
+  left: calc(50% - 249px);  
   text-align:center;
   margin: auto;
   display: flex;
@@ -34,14 +34,15 @@
 }
 .cultivando-a-mente-container {
   position: absolute;
-  padding-top:40%;
   text-align:center;
   margin: auto;
   display: flex;
   text-align: center;
   align-items: center;
-  max-width: 1149px;
-  height: 179px;
+  width: 100%;
+  height: auto;
+  bottom: 180px;
+  right: 0px;
 }
 .twitter-icon3 {
   position: relative;
@@ -97,13 +98,18 @@
   align-items: center;
 }
 .button2 {
-  background-color: var(--grey-200);
+  background-color: var(--true-white);
   position: absolute;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: flex-start;
 }
+
+.button2:hover {
+  opacity: 0.5;
+}
+
 .text-input8,
 .text-input9 {
   position: absolute;
@@ -117,8 +123,8 @@
   padding: var(--padding-xs) var(--padding-xl);
   gap: 8px;
   top: 442px;
-  left: 873px;
-  margin:auto;
+  left: calc(50% - 86px);
+  margin:auto;  
   border-radius: var(--br-9xs);
   box-sizing: border-box;
   width: 173px;
@@ -132,8 +138,8 @@
   font-family: var(--body-default);
   font-size: var(--header-h4-size);
   top: 295px;
-  left: 585px;
-  width: 624px;
+  left: calc(50% - 300px);
+  width: 600px;
   height: 47px;
   flex-direction: column;
 }
@@ -226,7 +232,7 @@
   padding: var(--padding-xs) var(--padding-xl);
   background-color: var(--purple-blue);
   top: 533px;
-  left: 1020px;
+  left: 52%;
   border-radius: var(--br-9xs);
   height: 48px;
   overflow: hidden;
@@ -243,12 +249,11 @@
 }
 .image-icon2 {
   position: absolute;
-  width: 100%;
-  top: calc(50% - 72px);
-  right: 52px;
-  left: 52px;
-  max-width: 100%;
+  padding: var(--padding-21xl);
   overflow: hidden;
+  top: calc(50% - 72px);
+  width: 100%;
+  box-sizing: border-box;
   height: 397px;
   object-fit: cover;
 }

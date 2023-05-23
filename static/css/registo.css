@@ -5,19 +5,14 @@
   font-weight: 600;
 }
 .text-input10 {
-  border: 0;
   font-family: var(--body-default);
   font-size: var(--header-h4-size);
-  background-color: transparent;
-  position: absolute;
   top: 336px;
   left: 96px;
-  max-width: 624px;
+  width: 624px;
   height: 47px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  border: 3;
 }
 .twitter-icon5 {
   position: relative;
@@ -40,7 +35,7 @@
 .bottom5,
 .footer-divider5 {
   position: absolute;
-  max-width: 1440px;
+  width: 100%;
 }
 .bottom5 {
   top: 853px;
@@ -60,63 +55,60 @@
   left: 0;
   height: 1px;
 }
-.button5,
+
 .registar {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-}
-.registar {
+  align-self: stretch;
   position: relative;
-  font-size: 32px;
+  font-size: var(--font-size-17xl);
   font-family: var(--body-default);
   color: var(--purple-blue);
-  text-align: left;
-  width: 174px;
-  height: 25px;
+  text-align: center;
+  margin: auto;
 }
-.button5 {
-  border-radius: var(--br-9xs);
-  border: 1px solid var(--purple-blue);
-  box-sizing: border-box;
-  width: 204px;
-  height: 94px;
-  overflow: hidden;
-  flex-direction: row;
-  padding: var(--padding-xs) var(--padding-xl);
-  justify-content: flex-start;
-}
+
 .button-row,
 .text-input12,
 .text-input13,
-.text-input15 {
-  border: 0;
-  background-color: transparent;
+.text-input15,
+.text-input10 {
   position: absolute;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 .button-row {
   cursor: pointer;
-  padding: 0;
-  top: 652px;
+  padding: var(--padding-xs) var(--padding-xl);
+  background-color: transparent;
+  top: 614px;
   left: 475px;
-  max-width: 160px;
-  height: 71px;
+  width: 204px;
+  height: 84px;
   flex-direction: row;
   align-items: flex-start;
+  border-radius: var(--br-9xs);
+  border: 1px solid var(--purple-blue);
+  box-sizing: border-box;
 }
+
+.button-row:hover {
+  opacity: 0.5;
+}
+
 .text-input12,
 .text-input13,
 .text-input15 {
+  border: 3;
   font-family: var(--body-default);
   font-size: var(--header-h4-size);
   top: 398px;
   left: 96px;
-  max-width: 624px;
+  width: 624px;
   height: 47px;
   flex-direction: column;
-  align-items: center;
 }
 .text-input13,
 .text-input15 {
@@ -223,50 +215,7 @@
   max-width: 1417px;
   height: 1px;
 }
-.chevron-down-icon,
-.escolha-um-tipo {
-  flex: 1;
-  position: relative;
-}
-.chevron-down-icon {
-  border-radius: var(--br-9xs);
-  max-width: 100%;
-  overflow: hidden;
-  height: 18px;
-}
-.base-pill-chit {
-  flex: 1;
-  border-radius: var(--br-9xs);
-  background-color: var(--true-white);
-  border: 1px solid var(--grey-200);
-  display: flex;
-  flex-direction: row;
-  padding: var(--padding-5xs) var(--padding-xs) var(--padding-5xs)
-    var(--padding-base);
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-9xs);
-}
-.base-dropdown-expanded-list,
-.pilll-chit {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.pilll-chit {
-  align-self: stretch;
-  flex-direction: row;
-}
-.base-dropdown-expanded-list {
-  position: absolute;
-  top: 614px;
-  left: 96px;
-  max-width: 269px;
-  height: 179px;
-  flex-direction: column;
-  font-size: var(--body-default-size);
-  color: var(--grey-900);
-}
+
 .junte-se-a-milhares {
   position: absolute;
   top: 168px;
@@ -288,4 +237,65 @@
   font-size: var(--header-h4-size);
   color: var(--grey-600);
   font-family: var(--body-default);
+}
+
+.base-dropdown {
+  position: relative;
+  font-family: var(--body-default);
+  font-size: var(--body-default-size);
+  width: 269px;
+  top: 614px;
+  left: 96px;
+}
+
+.base-dropdown select {
+  display: none;
+}
+
+.select-selected {
+  border-radius: var(--br-9xs);
+  background-color: var(--purple-blue);
+  border: 1px solid var(--true-white);
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: #fff transparent transparent transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: var(--true-white);
+  padding: 8px 16px;
+  border-radius: var(--br-9xs);
+  background-color: var(--purple-blue);
+  border: 1px solid var(--grey-200);
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: var(--purple-blue);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: hide;
+}
+
+.select-items div:hover, .same-as-selected {
+  opacity: 0.5;
 }
