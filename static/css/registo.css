@@ -293,7 +293,7 @@
 }
 
 .select-hide {
-  display: hide;
+  display: none;
 }
 
 .select-items div:hover, .same-as-selected {
