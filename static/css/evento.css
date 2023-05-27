@@ -5,9 +5,7 @@
   flex-shrink: 0;
 }
 .footer-divider7 {
-  align-self: stretch;
-  max-width: 100%;
-  height: 1px;
+  width: 1480px;
 }
 .twitter-icon7 {
   width: 24px;
@@ -178,6 +176,7 @@
   max-width: 100%;
   padding-top:65%;
   padding-left:30%;
+  padding-bottom:65%;
   height: 124px;
 }
 .screenshot-2023-05-07-at-18-05 {
@@ -358,8 +357,8 @@
   position: absolute;
   top: 331px;
   left: 0;
-  width: 1440px;
-  height: 397px;
+  width: 1490px;
+  height: 400px;
   object-fit: cover;
 }
 .aceitar-convite-para {
