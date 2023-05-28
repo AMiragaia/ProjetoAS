@@ -91,6 +91,10 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+@app.route("/index")
+def index():
+    return render_template('index.html')
+
 def add_users():
     # Users to be added
     users = [

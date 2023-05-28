@@ -6,7 +6,7 @@
 }
 .footer-divider {
   align-self: stretch;
-  max-width: 100%;
+  width: 100%;
   height: 1px;
 }
 .twitter-icon {
@@ -42,9 +42,8 @@
 .desktop-footer {
   position: absolute;
   bottom: 0;
-  left: calc(50% - 740px);
   background-color: var(--true-white);
-  width: 1440px;
+  width: 100%;
   flex-direction: column;
   padding: var(--padding-base) 0;
   box-sizing: border-box;
@@ -132,7 +131,7 @@
   position: absolute;
   top: 204px;
   left: -24px;
-  width: 1440px;
+  width: 100%px;
   overflow-x: auto;
   padding: var(--padding-21xl) var(--padding-45xl);
   box-sizing: border-box;
