@@ -95,6 +95,15 @@ def logout():
 def index():
     return render_template('index.html')
 
+@app.route('/meus-eventos')
+def meus_eventos():
+    return render_template('meus-eventos.html')
+
+
+@app.route('/editar-evento')
+def editar_eventos():
+    return render_template('editar-evento.html')
+
 def add_users():
     # Users to be added
     users = [

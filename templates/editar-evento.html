@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./editar-evento.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/editar-evento.css') }}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito Sans:wght@400;600;700;800;900&display=swap"
@@ -15,7 +15,9 @@
     />
   </head>
   <body>
+    
     <div class="editar-evento">
+      <b class="editar-feira-de">Editar Feira de Tecnologia</b>
       <div class="um-evento-que">
         Um evento que reúne empresas, empreendedores, especialistas e
         entusiastas do mundo da tecnologia. Nesse evento, também são realizadas
@@ -24,43 +26,53 @@
       </div>
       <div class="bottom1">
         <div class="social-media-stack1">
-          <img class="twitter-icon1" alt="" src="./public/24--twitter1.svg" />
+          <img class="twitter-icon1" alt="" src="{{ url_for('static', filename='images/24--twitter1.svg') }}" />
 
-          <img class="twitter-icon1" alt="" src="./public/24--instagram.svg" />
+          <img class="twitter-icon1" alt="" src="{{ url_for('static', filename='images/24--instagram.svg') }}" />
 
-          <img class="twitter-icon1" alt="" src="./public/24--facebook.svg" />
+          <img class="twitter-icon1" alt="" src="{{ url_for('static', filename='images/24--facebook.svg') }}" />
         </div>
         <div class="helpertext">© 2023 Eventos+</div>
       </div>
-      <img class="footer-divider1" alt="" src="./public/footer--divider.svg" />
+      <img class="footer-divider1" alt="" src="{{ url_for('static', filename='images/footer--divider.svg') }}" />
 
-      <b class="editar-feira-de">Editar Feira de Tecnologia</b>
-      <div class="informaes">Informações:</div>
-      <div class="adicionar-novos-palestrantes">
-        Adicionar novos palestrantes
-      </div>
-      <button class="button">
-        <div class="editar-evento1">Editar Evento</div>
-      </button>
-      <button class="text-input">
-        <div class="base-text-input">
-          <div class="label2">Segunda a Domingo</div>
+      <form>
+        <div class="informaes">Informações:</div>
+        
+        <input name="funcionamento" class="label2" placeholder="Segunda a Domingo"/>
+          
+        <input name="data-inicio" class="label3" placeholder="MM/DD/YYYY"/>
+        <div class="helper-text1">
+          <div class="helpertext">Data de inicio do evento</div>
         </div>
-      </button>
-      <input class="text-input1" type="text" />
 
-      <input class="text-input2" type="text" />
+        <input name="data-fim" class="label4" placeholder="MM/DD/YYYY"/>
+        <div class="helper-text2">
+          <div class="helpertext">Data de fim do evento</div>
+        </div>
 
-      <input class="text-input3" type="text" />
+        <input name="hora-inicio" class="text-input6" type="text" placeholder="hh:mm" />
+        <div class="helper-text3">
+          <div class="helpertext">Hora de início</div>
+        </div>
+        <input name="hora-fim" class="text-input7" type="text" placeholder="hh:mm" />
+        <div class="helper-text4">
+          <div class="helpertext">Hora de fim</div>
+        </div>
+        <input name="local" class="text-input1" type="text" placeholder="Local"/>
+        <input name="preço" class="text-input3" type="text" placeholder="Preço"/>
+        <div class="checkbox">
+          <input class="checkbox1" type="checkbox" />
 
-      <div class="text-input4">
-        <button class="base-text-input1">
-          <div class="label2">06/15/2023</div>
+          <div class="helpertext">Grátis</div>
+        </div>
+        <div class="adicionar-novos-palestrantes"> Adicionar novos palestrantes </div>
+        <input name="add-participantes" class="text-input2" type="text" placeholder="Email (Separe por virgula se houver mais de um)"/>
+        <button type="submit" class="button">
+          <div class="editar-evento1">Editar Evento</div>
         </button>
-        <div class="helper-text">
-          <div class="helpertext">MM/DD/YY</div>
-        </div>
-      </div>
+      </form>
+      
       <div class="desktop-full-signed-in">
         <div class="wordmark1">
           <b class="eventos1">
@@ -75,9 +87,6 @@
           <div class="nav-list-item3">
             <div class="helpertext">Eventos</div>
           </div>
-          <div class="nav-list-item4">
-            <div class="helpertext">Mensagens</div>
-          </div>
           <div class="nav-list-item3">
             <div class="helpertext">Meus Eventos</div>
           </div>
@@ -87,32 +96,15 @@
           <img
             class="header-avatar1"
             alt=""
-            src="./public/header--avatar1.svg"
+            src="{{ url_for('static', filename='images/header--avatar1.svg') }}"
           />
         </div>
-      </div>
-      <div class="text-input5">
-        <button class="base-text-input1">
-          <div class="label2">06/30/2023</div>
-        </button>
-        <div class="helper-text">
-          <div class="helpertext">MM/DD/YY</div>
-        </div>
-      </div>
-      <input class="text-input6" type="text" />
-
-      <input class="text-input7" type="text" />
-
-      <div class="checkbox">
-        <input class="checkbox1" type="checkbox" />
-
-        <div class="helpertext">Grátis</div>
       </div>
       <div class="descrio">Descrição:</div>
       <div class="modifique-somente-os">
         Modifique somente os campos que deseja editar na página do evento.
       </div>
-      <img class="image-2-icon" alt="" src="./public/image-2@2x.png" />
+      <img class="image-2-icon" alt="" src="{{ url_for('static', filename='images/image-2@2x.png') }}" />
     </div>
   </body>
 </html>

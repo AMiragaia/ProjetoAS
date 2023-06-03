@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./meus-eventos.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/meus-eventos.css') }}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Nunito Sans:wght@400;600;700;800;900&display=swap"
@@ -36,7 +36,7 @@
           <img
             class="header-avatar2"
             alt=""
-            src="./public/header--avatar2.svg"
+            src="{{ url_for('static', filename='images/header--avatar2.svg') }}"
           />
         </div>
       </div>
@@ -55,7 +55,7 @@
             <img
               class="bxssort-alt-icon"
               alt=""
-              src="./public/bxssortalt.svg"
+              src="{{ url_for( 'static', filename='images/bxssortalt.svg' ) }}"
             />
           </div>
           <div class="id-wrapper">
@@ -77,11 +77,11 @@
               <img
                 class="edit-1-2"
                 alt=""
-                src="./public/edit-1-2.svg"
+                src="{{ url_for( 'static', filename='images/edit-1-2.svg' ) }}"
                 id="edit12"
               />
 
-              <img class="trash-2-2-icon" alt="" src="./public/trash2-2.svg" />
+              <img class="trash-2-2-icon" alt="" src="{{ url_for( 'static', filename='images/trash2-2.svg' ) }}" />
             </div>
           </div>
         </div>
@@ -97,9 +97,9 @@
           </div>
           <div class="frame-wrapper">
             <div class="edit-1-2-parent">
-              <img class="trash-2-2-icon" alt="" src="./public/edit-1-2.svg" />
+              <img class="trash-2-2-icon" alt="" src="{{ url_for( 'static', filename='images/edit-1-2.svg' ) }}" />
 
-              <img class="trash-2-2-icon" alt="" src="./public/trash2-2.svg" />
+              <img class="trash-2-2-icon" alt="" src="{{ url_for( 'static', filename='images/trash2-2.svg' ) }}" />
             </div>
           </div>
         </div>
@@ -118,11 +118,11 @@
               <img
                 class="edit-1-2"
                 alt=""
-                src="./public/edit-1-2.svg"
+                src="{{ url_for( 'static', filename='images/edit-1-2.svg' ) }}"
                 id="edit122"
               />
 
-              <img class="trash-2-2-icon" alt="" src="./public/trash2-2.svg" />
+              <img class="trash-2-2-icon" alt="" src="{{ url_for( 'static', filename='images/trash2-2.svg' ) }}" />
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
         <img
           class="footer-divider2"
           alt=""
-          src="./public/footer--divider1.svg"
+          src="{{ url_for( 'static', filename='images/footer--divider1.svg' ) }}"
         />
 
         <div class="bottom2">
@@ -148,19 +148,19 @@
             <img
               class="trash-2-2-icon"
               alt=""
-              src="./public/24--twitter1.svg"
+              src="{{ url_for('static', filename='images/24--twitter1.svg') }}"
             />
 
             <img
               class="trash-2-2-icon"
               alt=""
-              src="./public/24--instagram.svg"
+              src="{{ url_for('static', filename='images/24--instagram.svg') }}"
             />
 
             <img
               class="trash-2-2-icon"
               alt=""
-              src="./public/24--facebook.svg"
+              src="{{ url_for('static', filename='images/24--facebook.svg') }}"
             />
           </div>
           <div class="label11">© 2023 Eventos+</div>
@@ -172,14 +172,14 @@
       var edit12 = document.getElementById("edit12");
       if (edit12) {
         edit12.addEventListener("click", function (e) {
-          window.location.href = "./editar-evento.html";
+          window.location.href = "./editar-evento";
         });
       }
       
       var edit122 = document.getElementById("edit122");
       if (edit122) {
         edit122.addEventListener("click", function (e) {
-          window.location.href = "./editar-evento.html";
+          window.location.href = "/editar-evento";
         });
       }
       </script>

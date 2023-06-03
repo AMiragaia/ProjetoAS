@@ -70,7 +70,7 @@
 }
 .os-meus-eventos {
   top: 95px;
-  left: 576px;
+  left: calc(50% - 140px);
   font-size: var(--font-size-17xl);
   display: flex;
   color: var(--purple-blue);
@@ -223,7 +223,7 @@
   position: absolute;
   top: 233px;
   left: 0;
-  width: 1491px;
+  width: 100%;
   height: 835px;
   display: flex;
   flex-direction: column;
@@ -236,7 +236,7 @@
 .footer-divider2 {
   align-self: stretch;
   position: relative;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   height: 1px;
   flex-shrink: 0;
@@ -268,7 +268,7 @@
   position: absolute;
   top: 1011px;
   left: 0;
-  width: 1491px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: var(--padding-base) 0;

@@ -38,21 +38,21 @@
           <div class="callouts-are-used">© 2023 Eventos+</div>
         </div>
       </div>
-      <div class="informao-do-evento-container">
-        <b class="div15bot">
+      <div>
+        <b>
           <span class="informao-do-evento">Informação do Evento:</span>
-          <span>{{ event.name }}</span>
+          <span class="event-name">{{ event.name }}</span>
         </b>
-        <div class="div15bot">
+        <div class="event-description">
           {{ event.description }}
         </div>
-        <div class="div15bot organizador-fundao-de-container">
-          <span class="tipo-de-evento">Organizador: </span>
-          <span class="cultural">{{ event.organizer.username }}</span>
+        <div>
+          <span class="organizador">Organizador: </span>
+          <span class="organizador-user">{{ event.organizer.username }}</span>
         </div>
         <div>
-          <span>Tipo de Evento: </span>
-          <span class="cultural">{{ event.type }}</span>
+          <span class="event" >Tipo de Evento: </span>
+          <span class="event-type">{{ event.type }}</span>
         </div>
       </div>
       <div class="preo-grtis">
